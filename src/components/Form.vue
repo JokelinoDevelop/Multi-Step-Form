@@ -5,7 +5,7 @@
     <form class="bg-white mx-6 px-6 pb-12 shadow-md rounded-lg"
       :class="{ 'grid grid-cols-11 grid-rows-6 h-[35rem] w-[60rem] gap-4 pt-3 pl-3 pb-3': windowWidth > 1000 }">
       <ButtonsStep v-if="windowWidth > 1000" :class="'rounded-lg col-start-1 col-end-4 row-start-1 row-end-7'"
-        :style="`background-image: url(${BackgroundImage})`" />
+        style="background-image: url('../src/assets/images/bg-sidebar-desktop.svg')" />
       <component :is="components[store.currentStep]" :class="'pt-6 col-start-5 col-end-11 row-start-1 row-end-4'" />
       <NavButtons v-if="windowWidth > 1000 && store.currentStep < 4"
         class='col-start-5 col-end-11 row-start-6 row-end-7' />
@@ -22,7 +22,7 @@ import AddonsStep from '@/components/AddonsStep.vue';
 import SummaryStep from '@/components/SummaryStep.vue';
 import ThankYouStep from '@/components/ThankYouStep.vue';
 import NavButtons from '@/components/NavButtons.vue'
-import BackgroundImage from '@/assets/images/bg-sidebar-desktop.svg'
+
 import { useFormStore } from '@/stores/formStore.js'
 
 const store = useFormStore()
@@ -51,9 +51,3 @@ onUnmounted(() => {
 
 
 </script>
-
-<style scoped>
-.bg-cover {
-  background-image: url('@/assets/images/bg-sidebar-desktop');
-}
-</style>
