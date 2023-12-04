@@ -9,7 +9,7 @@ export const useFormStore = defineStore('form', () => {
   const chosenAddons = ref([])
   const planError = ref(false)
   const planFirstLoad = ref(true)
-  const currentStep = ref(0)
+  const currentStep = ref(1)
   const isChecked = ref(false)
 
   const toggleCheckbox = () => {
@@ -61,7 +61,7 @@ export const useFormStore = defineStore('form', () => {
       return false
     }
     if (user.name.length < 3) {
-      user.errors.name = 'The username must be longer than 3 characters!'
+      user.errors.name = 'The username is invalid!'
       return
     }
     user.errors.name = ''

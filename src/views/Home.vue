@@ -1,6 +1,6 @@
 <template>
   <div class="bg-magnolia flex flex-col relative"
-    :class="{ 'h-screen justify-center items-center': windowWidth > 1000, 'min-h-screen justify-between': windowWidth < 1000 }">
+    :class="{ 'h-screen justify-center items-center': windowWidth >= 1000, 'min-h-screen justify-between': windowWidth < 1000 }">
     <picture v-if="windowWidth < 1000">
       <img src="@/assets/images/bg-sidebar-mobile.svg" alt="" class="w-full max-h-[20rem] object-cover relative">
     </picture>

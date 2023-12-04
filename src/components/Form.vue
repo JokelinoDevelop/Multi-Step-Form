@@ -3,7 +3,7 @@
     <ButtonsStep v-if="windowWidth < 1000" />
 
     <form class="bg-white mx-6 px-6 pb-12 shadow-md rounded-lg"
-      :class="{ 'grid grid-cols-11 grid-rows-6 h-[35rem] w-[60rem] gap-4 pt-3 pl-3 pb-3': windowWidth > 1000 }">
+      :class="{ 'grid grid-cols-11 grid-rows-6 h-[35rem] w-[60rem] gap-4 pt-3 pl-3 pb-3': windowWidth > 1000 , 'mx-3' : windowWidth <= 420 }">
       <ButtonsStep v-if="windowWidth > 1000" :class="'rounded-lg col-start-1 col-end-4 row-start-1 row-end-7'"
         style="background-image: url('bg-sidebar-desktop.svg')" />
       <component :is="components[store.currentStep]" :class="'pt-6 col-start-5 col-end-11 row-start-1 row-end-4'" />

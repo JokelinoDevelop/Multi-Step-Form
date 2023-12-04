@@ -1,6 +1,7 @@
 <template>
   <div>
-    <div class="flex flex-col items-center justify-center gap-6 py-12" :class="{ 'py-20': windowWidth > 1000 }">
+    <div class="flex flex-col items-center justify-center gap-6 py-12"
+      :class="{ 'py-20': windowWidth > 1000, 'py-24': windowWidth <= 500 }">
       <img src="@/assets/images/icon-thank-you.svg" alt="" class="w-16">
       <h1 class="text-marineBlue font-[700] text-3xl">Thank you!</h1>
       <p class="max-w-[34ch] text-center text-lg text-coolGray font-[500]"
@@ -17,6 +18,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 import { useFormStore } from '@/stores/formStore';
+
 
 const store = useFormStore();
 

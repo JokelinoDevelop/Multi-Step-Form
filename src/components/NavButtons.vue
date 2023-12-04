@@ -15,6 +15,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 import { useFormStore } from '@/stores/formStore';
+
 const store = useFormStore()
 
 const windowWidth = ref(window.innerWidth)
