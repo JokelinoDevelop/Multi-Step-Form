@@ -1,6 +1,6 @@
 <template>
-  <div class="bg-magnolia flex flex-col  relative"
-    :class="{ 'h-screen justify-center items-center': windowWidth > 1000, 'h-full': windowWidth < 1000 }">
+  <div class="bg-magnolia flex flex-col relative"
+    :class="{ 'h-screen justify-center items-center': windowWidth > 1000, 'min-h-screen justify-between': windowWidth < 1000 }">
     <picture v-if="windowWidth < 1000">
       <img src="@/assets/images/bg-sidebar-mobile.svg" alt="" class="w-full max-h-[20rem] object-cover relative">
     </picture>
@@ -10,11 +10,10 @@
       <Form />
     </div>
 
-
-    <div class="w-full bg-white " v-if="store.currentStep < 4 && windowWidth < 1000">
+    <div class="w-full bg-white" v-if="store.currentStep < 4 && windowWidth < 1000"
+      style="min-height: 50px; overflow-y: auto;">
       <NavButtons />
     </div>
-
   </div>
 </template>
 
