@@ -9,7 +9,7 @@ export const useFormStore = defineStore('form', () => {
   const chosenAddons = ref([])
   const planError = ref(false)
   const planFirstLoad = ref(true)
-  const currentStep = ref(1)
+  const currentStep = ref(0)
   const isChecked = ref(false)
 
   const toggleCheckbox = () => {
